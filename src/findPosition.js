@@ -21,14 +21,31 @@ exports.getFrontLen = function getFrontLen(num) {
 exports.splitNumber = function(num, spLen) {
     var count = spLen;
     var numStr = '' + num;
-    var i = 0;
-    var exp = new Exp()
+    var numLen = numStr.length;
+    var i = 1;
+    var j = 0;
+    var retArr = new Array(spLen);
 
-    for (; i < count; i++) {
-
+    for (i = 1; i <= spLen; i++) {
+        retArr[i-1] = [];
+        retArr[i-1][0] = numStr.slice(0, i);
+        for (j = i; j < numStr.length;) {
+            retArr[i - 1].push(numStr.slice(j, j + spLen));
+            j += spLen;
+        }
     }
+    return retArr;
 }
 
+// 对一组字符串做监测，判断是否为连续的数组
+// 这里卡住了，因为如['9', '2'] 这种情况的要怎么判断为 19， 20
+exports.checkSerial = function(array, spLen) {
+
+}
+
+exports.checkTwoNum = function(str1, str2, spLen) {
+
+}
 
 exports.findPosition = function(num) {
     return 0

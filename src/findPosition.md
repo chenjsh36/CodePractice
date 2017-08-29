@@ -1,3 +1,4 @@
+[The position of a digital string in a infinite digital string](https://www.codewars.com/kata/582c1092306063791c000c00/train/javascript)
 if 几个相邻数字组合
     找出第一个数字，计算在哪个位置
 else
@@ -14,3 +15,11 @@ else
 4 前后都被截取了： '89910', '0010110210'
 
 
+'92'
+
+'9', '2' => 19 20
+'92' => 92
+
+9910
+
+'99', '10' => 
